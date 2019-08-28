@@ -28,10 +28,6 @@ app.get('/',function(req,res){
   res.send('Welcome to my product API. Use endpoints to filter our the data');
 })
 
-app.get('/allLists',function(req,res){
-  res.send(allLists);
-})
-
 
 app.post('/list',function(req,res){
   const list = new LIST({
@@ -44,6 +40,8 @@ app.post('/list',function(req,res){
     res.send(result)
   }).catch(err => res.send(err))
 });
+
+
 
 
 
